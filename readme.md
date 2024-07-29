@@ -52,47 +52,47 @@ curl -H "Authorization: Bearer your_access_token" http://127.0.0.1:8000/employee
 ```
 ### API Endpoints
 
-1.  Get All Employees:
-URL: /employees/
-Method: GET
-Auth: Requires JWT token
-Description: Retrieve a list of all employees.
+1.  Get All Employee
+- URL: /employees/
+- Method: GET
+- Auth: Requires JWT token
+- Description: Retrieve a list of all employees.
 
-2. Get Single Employee by their ID:
-URL: /employees/{id}/
-Method: GET
-Auth: Requires JWT token
-Description: Retrieve a single employee by ID.
+3. Get Single Employee by their ID
+- URL: /employees/{id}/
+- Method: GET
+- Auth: Requires JWT token
+- Description: Retrieve a single employee by ID.
 
-3. Create an Employee:
-URL: /employees/
-Method: POST
-Auth: Requires JWT token
-Description: Create a new employee.
-Body Parameters:
+4. Create an Employee
+- URL: /employees/
+- Method: POST
+- Auth: Requires JWT token
+- Description: Create a new employee.
+- Body Parameters:
 {
     name: Employee's name (string)
     department: Employee's department (string)
     workflow: Employee's workflow (float)
 }
 
-4. Update an Employee:
-URL: /employees/{id}/
-Method: PUT
-Auth: Requires JWT token
-Description: Update an existing employee by ID.
-Body Parameters:
+5. Update an Employee
+- URL: /employees/{id}/
+- Method: PUT
+- Auth: Requires JWT token
+- Description: Update an existing employee by ID.
+- Body Parameters:
 {
     name: Employee's name (string)
     department: Employee's department (string)
     workflow: Employee's workflow (float)
 }
 
-5. Delete an Employee:
-URL: /employees/{id}/
-Method: DELETE
-Auth: Requires JWT token
-Description: Delete an employee by ID.
+6. Delete an Employee
+- URL: /employees/{id}/
+- Method: DELETE
+- Auth: Requires JWT token
+- Description: Delete an employee by ID.
 
 
 ### Tests
