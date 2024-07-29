@@ -21,15 +21,17 @@ A Django project with JWT authentication for managing employees.
    ```bash
    git clone <https://github.com/Mudka/Operations-Task.git>
    cd myproject
-
-2. Install Dependencies: poetry install
-3. Run migrations: make migrate
-4. Create a Superuser: make createsuperuser 
-   Or you can use an existing one:{
+3. Install Dependencies: poetry install
+4. Run migrations: make migrate
+5. Create a Superuser: make createsuperuser 
+   Or you can use an existing one:
+   ```bash
+   {
     username: mantas
     password: mantas
    }
-5. Run the Development server: make run
+   ```
+7. Run the Development server: make run
 
 ### Usage
 
@@ -38,16 +40,16 @@ A Django project with JWT authentication for managing employees.
 curl -X POST /employees/api/token/ -d "username=<your_username>&password=<your_password>"
 ```
 2. You will get a response:
-
+```bash
 {
     "refresh": "your_refresh_token",
     "access": "your_access_token"
 }
-
+```
 3. You will need to include the access token in the Authorization header to perform authenticated requests to protected endpoints. Example:
-
+```bash
 curl -H "Authorization: Bearer your_access_token" http://127.0.0.1:8000/employees/
-
+```
 ### API Endpoints
 
 1.  Get All Employees:
@@ -95,7 +97,9 @@ Description: Delete an employee by ID.
 
 ### Tests
 To execute all the test cases in the project use:
-"make test"
+```bash
+make test
+```
 
 ### Additional notes
 
