@@ -1,4 +1,4 @@
-A Django project with JWT authentication for managing employees.
+# A Django project with JWT authentication for managing employees.
 
 ## Table of Contents
 - [Setup](#setup)
@@ -8,86 +8,86 @@ A Django project with JWT authentication for managing employees.
 - [Running Tests](#running-tests)
 - [Additional Notes](#additional-notes)
 
-## Installation
-
 ### Prerequisites
 
 - Python 3.8+
 - [Poetry](https://python-poetry.org/docs/#installation)
 
-### Steps
+### Setup
 
 1. **Clone the Repository**:
    ```bash
    git clone <https://github.com/Mudka/Operations-Task.git>
    cd myproject
-3. Install Dependencies: poetry install
-4. Run migrations: make migrate
-5. Create a Superuser: make createsuperuser 
+2. Install Dependencies: ```poetry install```
+3. Run migrations: ```make migrate```
+4. Create a Superuser: ```make createsuperuser```
    Or you can use an existing one:
-   ```bash
+   ```
    {
     username: mantas
     password: mantas
    }
    ```
-7. Run the Development server: make run
+5. Run the Development server: ```make run ```
 
 ### Usage
 
-1. Send a POST request to /employees/api/token/ with your username and password to get the access and refresh tokens.
+Send a POST request to ```/employees/api/token/``` with your username and password to get the access and refresh tokens.
 ```bash
 curl -X POST /employees/api/token/ -d "username=<your_username>&password=<your_password>"
 ```
-2. You will get a response:
+You will get a response:
 ```bash
 {
     "refresh": "your_refresh_token",
     "access": "your_access_token"
 }
 ```
-3. You will need to include the access token in the Authorization header to perform authenticated requests to protected endpoints. Example:
+You will need to include the access token in the Authorization header to perform authenticated requests to protected endpoints. Example:
 ```bash
 curl -H "Authorization: Bearer your_access_token" http://127.0.0.1:8000/employees/
 ```
 ### API Endpoints
 
-1.  Get All Employee
+Get All Employee
 - URL: /employees/
 - Method: GET
 - Auth: Requires JWT token
 - Description: Retrieve a list of all employees.
 
-3. Get Single Employee by their ID
+Get Single Employee by their ID
 - URL: /employees/{id}/
 - Method: GET
 - Auth: Requires JWT token
 - Description: Retrieve a single employee by ID.
 
-4. Create an Employee
+Create an Employee
 - URL: /employees/
 - Method: POST
 - Auth: Requires JWT token
 - Description: Create a new employee.
 - Body Parameters:
-{
-    name: Employee's name (string)
-    department: Employee's department (string)
+```
+{ 
+    name: Employee's name (string) 
+    department: Employee's department (string) 
     workflow: Employee's workflow (float)
 }
-
-5. Update an Employee
+```
+Update an Employee
 - URL: /employees/{id}/
 - Method: PUT
 - Auth: Requires JWT token
 - Description: Update an existing employee by ID.
 - Body Parameters:
-{
+```
+{ 
     name: Employee's name (string)
     department: Employee's department (string)
     workflow: Employee's workflow (float)
-}
-
+} 
+```
 6. Delete an Employee
 - URL: /employees/{id}/
 - Method: DELETE
