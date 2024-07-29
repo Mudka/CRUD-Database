@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "myproject"
+version = "0.1.0"
+description = "A Django project with JWT authentication."
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^3.2"
+djangorestframework = "^3.12"
+djangorestframework-simplejwt = "^4.7"
+poetry = "^1.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+pytest-django = "^4.1"
+
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"
