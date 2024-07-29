@@ -34,9 +34,9 @@ A Django project with JWT authentication for managing employees.
 ### Usage
 
 1. Send a POST request to /employees/api/token/ with your username and password to get the access and refresh tokens.
-
+```bash
 curl -X POST /employees/api/token/ -d "username=<your_username>&password=<your_password>"
-
+```
 2. You will get a response:
 
 {
