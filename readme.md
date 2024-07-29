@@ -1,12 +1,12 @@
 A Django project with JWT authentication for managing employees.
 
 ## Table of Contents
-- [Setup]
-- [Usage]
-- [API Endpoints]
-- [Authentication]
-- [Running Tests]
-- [Additional Notes]
+- [Setup](#setup)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Authentication](#authentication)
+- [Running Tests](#running-tests)
+- [Additional Notes](#additional-notes)
 
 ## Installation
 
