@@ -1,4 +1,4 @@
-# A Django project with JWT authentication for managing employees.
+# Django project with JWT authentication for managing employees.
 
 ## Table of Contents
 - [Setup](#setup)
